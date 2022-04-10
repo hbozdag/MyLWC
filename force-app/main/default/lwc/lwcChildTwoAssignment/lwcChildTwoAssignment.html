@@ -1,0 +1,36 @@
+<template>
+    <lightning-card title="Complex Child component">
+        <div class="slds-grid slds-grid_vertical">
+            <div class="slds-col">
+                <span>
+                    <lightning-input 
+                        type="text"
+                        label="Enter a name: "
+                        class="slds-var-m-around_small"
+                        onchange={handleNameChange}
+                    ></lightning-input>
+                </span>
+            </div>
+            <div class="slds-col">
+                <span>
+                    <lightning-input 
+                        type="text"
+                        label="Enter a number: "
+                        class="slds-var-m-around_small"
+                        onchange={handleNumberChange}
+                    ></lightning-input>
+                </span>
+            </div>
+            <div class="slds-col">
+                <span>
+                    <lightning-button 
+                        variant="brand"
+                        label="Fire Event from Complex Child"
+                        class="slds-var-m-around_small"
+                        onclick={handleClick}
+                    ></lightning-button>
+                </span>
+            </div>
+        </div>
+    </lightning-card>
+</template>

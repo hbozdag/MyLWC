@@ -1,0 +1,33 @@
+<template>
+    <lightning-card icon-name="standard:person_account" title="Wire Property Apex Call">
+    <lightning-input 
+        label="Number 1" 
+        type="number"
+        name="num1" 
+        onchange={handleChangeNum1}
+    >
+    </lightning-input>
+    <lightning-input
+      type="number"
+      label="Number 2"
+      name="num2"
+      onchange={handleChangeNum2}
+    ></lightning-input>
+    <br/>
+    <lightning-button label="a+b" onclick={handleSum}></lightning-button>
+    <lightning-button label="a-b" onclick={handleSubtract}></lightning-button>
+    <lightning-button label="a/b" onclick={handleDivision}></lightning-button>
+    <lightning-button label="a×b" onclick={handleMultiplication}></lightning-button>
+    <lightning-button label="a^2" onclick={handleSquare}></lightning-button>
+    <lightning-button label="a^b" onclick={handleExponential}></lightning-button>
+    <lightning-button label="√a" onclick={handleRoot}></lightning-button>
+
+    <br/>
+    <lightning-input
+      label="Result"
+      name="result"
+      read-only="true"
+      value={result}
+    ></lightning-input>
+  </lightning-card>
+</template>

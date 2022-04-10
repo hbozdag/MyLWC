@@ -1,0 +1,18 @@
+<template>
+    <lightning-card title="My Event Speakers"> 
+    <template if:true={speakers.data}>
+        <template for:each={speakers.data} for:item="speaker" for:index="index">
+            <p key={speaker.id}>Index:{index}</p>
+            <p key={speaker.id}>Name:{speaker.Name}</p>
+            <p key={speaker.id}>----------------------</p>
+
+        </template>
+
+    </template>
+    <template if:true={speakers.error}>
+        Error occured in fetching speakers: {speakers.error.body.message}>
+
+    </template>
+  
+</lightning-card>
+</template>

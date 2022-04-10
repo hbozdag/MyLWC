@@ -1,0 +1,27 @@
+<template>
+    <lightning-card title="New Case">
+        <lightning-record-edit-form 
+        object-api-name={caseObjectName}
+        onsuccess={handleSuccess}>
+
+        <lightning-input-field field-name={caseSubject}></lightning-input-field>
+        <lightning-input-field field-name={caseAccount}></lightning-input-field>
+        <lightning-input-field field-name={caseDescription}></lightning-input-field>
+
+        <lightning-button type="submit" variant="brand" label="Create Case"></lightning-button>
+        </lightning-record-edit-form>
+        <lightning-record-view-form
+        object-api-name={caseObjectName}
+        record-id={recordId} >
+            Recent Case Details:
+<lightning-output-field field-name={caseSubject}></lightning-output-field>
+<lightning-output-field field-name={caseAccount}></lightning-output-field>
+<lightning-output-field field-name={caseDescription}></lightning-output-field>
+
+
+    </lightning-record-view-form>
+
+
+    </lightning-card>
+    
+</template>

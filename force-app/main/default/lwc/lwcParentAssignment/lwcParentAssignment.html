@@ -1,0 +1,38 @@
+<template>
+    <!-- Lightning card for the title/header with icon -->
+    <lightning-card 
+        title="Child to Parent Communication" 
+        icon-name="utility:people"
+    >
+        <!-- padding around the div -->
+        <div class="slds-var-p-around_small">
+            <!-- Create grid of 2 columns, one for each child component -->
+            <div class="slds-grid slds-gutters">
+                <!-- Column for child component -->
+                <div class="slds-col">
+                    <span>
+                        <p><b>Event Name</b>: {eventName}</p>
+                        <div class="slds-box slds-var-p-around_small">
+                            <!-- Call to child component -->
+                            <c-lwc-child-one-assignment
+                                onclicked={handleButtonClicked}
+                            ></c-lwc-child-one-assignment>
+                        </div>
+                    </span>
+                </div>
+                <!-- Column for child2 component -->
+                <div class="slds-col">
+                    <span>
+                        <p><b>Event Name</b>: {eventName2}</p>
+                        <div class="slds-box slds-var-p-around_small">
+                            <!-- Call to child2 component -->
+                            <c-lwc-child-two-assignment
+                                onclicked2={handleButtonClicked2}
+                            ></c-lwc-child-two-assignment>
+                        </div>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </lightning-card>
+</template>

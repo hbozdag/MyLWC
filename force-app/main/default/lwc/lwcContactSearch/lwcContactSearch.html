@@ -1,0 +1,27 @@
+<template>
+    <lightning-input
+        label="Enter Account Name"
+        onchange={handleSearchText}
+        placeholder="Enter some text for account search on name"
+    ></lightning-input>
+    <lightning-button 
+        variant="brand" 
+        label="Search Contacts" 
+        title="Search Contacts" 
+        onclick={handleSearchContacts} 
+        class="slds-var-m-left_x-small"
+    ></lightning-button>
+ <br/>
+ <template if:true={conList.data}>
+    <template for:each={conList.data} for:item="contact" for:index="index">
+        <p key={contact.Id}> Index: {index}</p>
+        <p key={contact.Id}> Name:{contact.Name}</p>
+        <p key={contact.Id}> Account Name:{contact.Account.Name}</p>
+        <p key={contact.Id}>-------------------------------------</p>
+    </template>
+    </template>
+    <template if:true={conList.error}>
+        Error occured in fetching contacts: {conList.error.body.message}
+    </template>
+    
+</template>

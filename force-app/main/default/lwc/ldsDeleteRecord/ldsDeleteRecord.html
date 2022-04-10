@@ -1,0 +1,15 @@
+<template>
+    <!-- Ask for Id of the record -->
+    <!-- Button to delete the Account on the captured accountId -->
+    <lightning-card title="LDS Delete record">
+        <lightning-input 
+            label="Enter Account Id"
+            onchange={handleIdChange}
+        ></lightning-input>
+    </lightning-card>
+    <br/>
+    <lightning-button 
+        label="Delete"
+        onclick={handleAccountDelete}
+    ></lightning-button>
+</template>
